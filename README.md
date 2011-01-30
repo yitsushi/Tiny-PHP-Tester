@@ -30,11 +30,11 @@ It's NOT a professional tool just useful.
        Pass:         6
        Failures:     1
 
-Cases: Number of testing classes
-Defects: Number of testing classes what have least one failed test
-Tests: Number of tests
-Pass: Number of tests which make no mistake
-Failures: Number of tests which make mistake
+ * Cases: Number of testing classes
+ * Defects: Number of testing classes what have least one failed test
+ * Tests: Number of tests
+ * Pass: Number of tests which make no mistake
+ * Failures: Number of tests which make mistake
 
     Return value: 1
 
