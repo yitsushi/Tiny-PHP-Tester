@@ -36,7 +36,7 @@ It's NOT a professional tool just useful.
  * Pass: Number of tests which make no mistake
  * Failures: Number of tests which make mistake
 
-    Return value: 1
+Return value: 1
 
 ## AUTHOR
     Name:      Balazs Nadasdi
