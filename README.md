@@ -13,6 +13,6 @@ It's NOT a professional tool just useful.
  * Customize the code as you liking
 
 ## AUTHOR
-  Name:    Balazs Nadasdi
-  Email:   yitsushi gmail com
-  Company: Woop media kft.
+    Name:    Balazs Nadasdi
+    Email:   yitsushi gmail com
+    Company: Woop media kft.
