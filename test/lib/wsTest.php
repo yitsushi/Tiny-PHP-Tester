@@ -12,14 +12,15 @@ class wsTest {
 
   public function assert($first, $second) {
     if ($first === $second) {
-      echo ".";
+      echo termcolored(".", "LIGHT_GREEN");
     } else {
-      echo "F";
+      echo termcolored("F", "LIGHT_RED");
       ob_start();
       echo "================\n";
-      echo "{$this->name}: \n";
-      var_dump($first, $second);
-      $this->error = ob_get_contents();
+      echo 'Need:    '; var_dump($first);
+      echo 'Get:     '; var_dump($second);
+      echo "================\n";
+      $this->error = termcolored(ob_get_contents(), 'YELLOW');
       ob_end_clean();
     }
   }

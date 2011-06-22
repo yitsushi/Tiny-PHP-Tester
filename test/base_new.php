@@ -41,7 +41,7 @@ class wsBase {
         $prefix = preg_replace('/^test_/', '', $m);
 
         $this->r->$case->set_test_namespace($prefix);
-        $c->$m($this->r->$case);
+        $c->$m(&$this->r->$case);
       }
 
       ob_start();
@@ -77,12 +77,6 @@ $_colors = array(
   'REVERSE'       => "[7m"
 );
 function termcolored($text, $color="NORMAL", $back=1){
-  if (NOCOLOR) {
-    if ($back) return "{$text}";
-    else echo "{$text}";
-
-    return false;
-  }
   global $_colors;
   $out = $_colors["{$color}"];
   if($out == ""){ $out = "[0m"; }
@@ -91,8 +85,6 @@ function termcolored($text, $color="NORMAL", $back=1){
   }else{
     echo chr(27)."{$out}$text".chr(27).chr(27)."[0m";
   }
-
-  return true;
 }
 
 if (basename(__FILE__) == basename($argv[0])) {

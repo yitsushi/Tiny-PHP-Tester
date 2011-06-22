@@ -3,6 +3,7 @@ namespace wsTestLib;
 class TestCase {
   // Define a human name
   var $name = 'Simple test case';
+  var $skip = false;
 
   // It will be called first (aka: __construct)
   public function sunrise() {
@@ -14,11 +15,11 @@ class TestCase {
     echo 'TestCase sunset.', "\n";
   }
 
-  public function test_task1($c) {
-    $c->my_match_with_is_true->is_true(true);
+  public function test_my_match($c) {
+    $c->with_is_true->is_true(true);
   }
 
-  public function test_task2($c) {
-    $c->my_mismatch_with_is_true->is_true(false);
+  public function test_my_mismatch($c) {
+    $c->with_is_true->is_true(false);
   }
 }
